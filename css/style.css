@@ -4,98 +4,177 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    color: white;
 }
 
-body {
-    height: 100%;
-    width: 100%;
-    background: url(../images/main.jpg) no-repeat center / cover;
-    background-attachment: fixed;
+:root {
+    --base: 1440px;
+    --vw-scale: calc(100vw / var(--base));
 }
 
-body::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: black;
-    width: 100%;
-    height: 500vh;
+.main {
+    font-size: 1.2rem;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #9ee4e0, #3175f3);
+    overflow: hidden;
+    position: relative;
+}
+
+nav {
+    width: 80%;
+    margin: calc(32px * var(--vw-scale))auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo_area {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    z-index: 1;
+}
+
+.logo_img {
+    margin: 0 calc(16px * var(--vw-scale)) 0 0;
+    aspect-ratio: 1/1;
+}
+
+.logos h2 {
+    font-size: 1.5rem;
+}
+
+.nav__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__menu li {
+    padding: 0 calc(32px * var(--vw-scale));
+}
+
+.nav__menu li a {
+    font-weight: 500;
+    color: aliceblue;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.nav__menu li a:hover {
     opacity: 0.5;
 }
 
-.title h1 {
-    font-family: "Poppins", sans-serif;
-    font-size: 4rem;
-}
+/* infomation */
 
-.title {
+.infomation {
+    width: 1200px;
+    height: 1200px;
     position: absolute;
-    top: 15%;
-    left: 50%;
-    z-index: 1;
-    opacity: 0;
+    top: 50%;
+    left: -10%;
+    transform: translateY(-50%);
 }
 
-.title.active {
-    opacity: 1;
-    transition: all 3s;
+.overlay {
+    width: 0;
+    height: 0;
+    border-top: 600px solid #ffffff;
+    border-right: 600px solid transparent;
+    border-bottom: 600px solid #ffffff;
+    border-left: 600px solid #ffffff;
 }
 
-section {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    z-index: 1;
-}
-
-h2 {
-    font-family: "Poppins", sans-serif;
-    font-size: 2rem;
+#circle {
+    width: 1200px;
+    height: 1200px;
     position: absolute;
-    top: 70%;
-    z-index: 2;
-    letter-spacing: 2px;
-    font-size: 2.3em;
-    opacity: 0;
-    transition: all 0.2s;
-}
-
-h2.active {
-    opacity: 1;
-    transition: all 5s;
-}
-
-.img-wrap {
-    position: relative;
-    top: 40%;
-    height: 40%;
-    width: 1px;
-    overflow: hidden;
-    opacity: 0;
-}
-
-.img-wrap.active {
-    width: 40vw;
-    opacity: 1;
-    transition: opacity 1s, width 2s;
-}
-
-.img {
-    position: absolute;
+    border-radius: 50%;
     top: 0;
     left: 0;
-    width: 40vw;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    transform: scale(1.6);
-} 
+    transform: rotate(0deg);
+    transition: 1s;
+}
 
-.img-wrap.title.active > .img {
-    transform: scale(1);
-    transition: 1s ease-out;
+.feature {
+    position: absolute;
+    color: #fff;
+}
+
+.feature img {
+    width: 72px;
+}
+
+.feature div {
+    margin-left: calc(16px * var(--vw-scale));
+}
+
+.feature div p {
+    margin-top: calc(8px * var(--vw-scale));
+}
+
+.one {
+    display: flex;
+    top: 450px;
+    right: 70px;
+}
+
+.two {
+    display: flex;
+    top: 100px;
+    left: 500px;
+    transform: rotate(-90deg);
+}
+
+.three {
+    display: flex;
+    top: 450px;
+    left: 70px;
+    transform: rotate(-180deg);
+}
+
+.four {
+    display: flex;
+    bottom: 170px;
+    left: 500px;
+    transform: rotate(-270deg);
+}
+
+.pc {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.feature h1 {
+    font-size: 3rem;
+}
+
+.control {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.control img {
+    width: 40px;
+    height: auto;
+}
+
+.control h3 {
+    margin: calc(32px * var(--vw-scale)) 0;
+    color: #fff;
+}
+
+#upbtn {
+    cursor: pointer;
+}
+
+#downbtn {
+    cursor: pointer;
+    transform: rotate(180deg);
 }
