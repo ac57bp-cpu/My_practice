@@ -4,47 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background-Moving</title>
+    <title>Loading</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-    </style>
 </head>
 
 <body>
-    <section class="showcase">
-        <header>
-            <h1 class="logo">Fantasy</h1>
-            <div class="toggle"></div>
-        </header>
+    <div class="omikuzi">
+        <h1 class="omikuzi__headline">おみくじアプリ
+        </h1>
 
-        
-        <video src="./images/fantasy.mp4" autoplay loop muted></video>
-
-        <div class="overlay"></div>
-
-        <div class="text">
-            <h2>Fantasy Life</h2>
-            <h3>Explore Something New</h3>
-            <a href="#">Dive into</a>
+        <div class="omikuzi__result">
+            <img id="js-result" src="./images/omikuzi.png" alt="おみくじ">
         </div>
 
-        <ul class="social">
-            <li><a href="#"><img src="./images/facebook.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/instagram.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/twitter.png" alt=""></a></li>
-        </ul>
-    </section>
+        <div class="btn">
+            <button type="button" class="omikuzi__btn" id="js-btn">おみくじを引く</button>
 
-    <div class="menu">
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">Support</a></li>
-        </ul>
+            <button type="button" class="btn">押してね</button>
+        </div>
     </div>
+
+
+    <section>
+        <h1 class="text">java</h1>
+        <ul>
+            <li>仕組み</li>
+            <li>基礎</li>
+            <li>関数</li>
+        </ul>
+        <button class="jave">btn</button>
+    </section>
 </body>
 
 </html>

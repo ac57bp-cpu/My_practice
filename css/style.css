@@ -1,150 +1,66 @@
 @charset "utf-8";
 
-body {
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
+.omikuzi h1 {
+    text-align: center;
+    font-size: 2rem;
+    padding: 3rem 0;
+    margin-bottom: 5rem;
 }
 
-.showcase {
-    width: 100%;
-    height: 100vh;
-    background-color: antiquewhite;
-    padding: 2vw 7vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transform: translateX(0);
-    transition: transform 1s ease;
+@keyframes shaka {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    5% {
+        transform: rotate(10deg);
+    }
+
+    10% {
+        transform: rotate(-10deg);
+    }
+
+    15% {
+        transform: rotate(10deg);
+    }
+
+    20% {
+        transform: rotate(-10deg);
+    }
+
+    25% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
-.showcase header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 2vw 7vw;
-    z-index: 100;
+.omikuzi__result {
+    text-align: center;
+    margin-bottom: 5rem;
+    animation: shaka;
+    animation-duration: 2.5s;
+    animation-delay: 3s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
 }
 
-.showcase.active {
-    position: absolute;
-    transform: translateX(-300px);
-    transition: transform 1s ease;
+
+.btn {
+    text-align: center;
 }
 
-.logo {
+.omikuzi__btn {
+    padding: 1rem 3rem;
+    border: 2px solid #c78383;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    transition: all .5s;
+}
+
+.omikuzi__btn:hover {
+    background-color: #c78383;
     color: aliceblue;
-    font-size: clamp(1.5rem, 2vw, 3rem);
 }
-
-.toggle {
-    background: url(../images/menu.png);
-    width: 60px;
-    height: 60px;
-    background-repeat: no-repeat;
-    background-size: 30px;
-    background-position: center;
-    cursor: pointer;
-}
-
-.toggle.active {
-    background: url(../images/close.png);
-    width: 60px;
-    height: 60px;
-    background-repeat: no-repeat;
-    background-size: 30px;
-    background-position: center;
-    cursor: pointer;
-
-}
-
-video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    opacity: 0.8;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #3d5a61;
-    mix-blend-mode: overlay;
-}
-
-.text {
-    z-index: 10;
-    color: aliceblue;
-    font-size: clamp(1rem, 1vw, 2rem);
-    line-height: 3rem;
-}
-
-.text h2 {
-    font-size: clamp(4rem, 3vw, 6rem);
-    text-transform: uppercase;
-}
-
-.text a {
-    display: inline-block;
-    margin-top: 20px;
-    background-color: azure;
-    color: rgb(68, 67, 67);
-    padding: 10px 30px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    transition: letter-spacing 0.8s ease;
-}
-
-.text a:hover {
-    letter-spacing: 8px;
-}
-
-.social {
-    position: absolute;
-    bottom: 20px;
-    display: flex;
-}
-
-.social li a {
-    display: inline-block;
-    margin-right: 20px;
-    transition: transform 0.5s ease;
-}
-
-.social li a:hover {
-    transform: translateY(-15px);
-}
-
-.menu {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 300px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 2rem;
-    z-index: -1;
-}
-
-.menu li a {
-    font-size: 1rem;
-    opacity: 1;
-    transition: opacity 0.8s ease;
-}
-
-.menu li a:hover {
-    opacity: 0.5;
-}
-
